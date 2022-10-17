@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 @NgModule({
   declarations: [
     AppComponent
