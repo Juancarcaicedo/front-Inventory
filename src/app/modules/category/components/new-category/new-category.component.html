@@ -1,10 +1,17 @@
+
+<!--clase complementaria a categorias nos permite realizar el cuadro de dialgogo para agregar una nueva cateogoria-->
+<!--estado formulario nos permite darle un nombre al formulario agregar o actualizar depende evento-->
 <h2 mat-dialog-title> {{ estadoFormulario }} nueva Categoría </h2>
 <mat-dialog-content>
 
+    <!--llamamos a nuestra funcion de typeScript -->
     <form [formGroup]="categoryForm">
         <div class="category-container">
 
+            <!--nos permite llenar un campo -->
             <mat-form-field>
+                <!-- mat input entrada required  es requerido para ser la union entre las propiedades-->
+                <!--Nombre y descripcion usamos formcontrolname el nombre debe ser igual al ts-->
                 <input matInput placeholder="Nombre" formControlName="name" required/>
             </mat-form-field>
 
@@ -17,12 +24,15 @@
     </form>
 </mat-dialog-content>
 
+<!--acciones de los eventos o dialogos-->
 <mat-dialog-actions>
 
+    <!--nos permite guardar en la base de datos  con la propiedad disable inabilitamos los datos-->
+    <!--hasta que los llene y el metodo category form.invalid regrese true-->
     <button mat-button color="primary" (click)="onSave()" [disabled]="categoryForm.invalid">
         <mat-icon>save</mat-icon> Guardar
     </button>
-
+<!--nos permite cancelar-->
     <button mat-button color="primary" (click)="onCancel()">
         <mat-icon>cancel</mat-icon> Cancelar
     </button>

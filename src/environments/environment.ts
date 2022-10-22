@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  /* comparte todas las api rest que se van a consumir */ 
-  base_url:"http://localhost:8080/api/v1"
+  base_url: "http://localhost:8080/api/v1"
 };
 
 /*

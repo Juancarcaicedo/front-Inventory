@@ -10,7 +10,9 @@ import { CategoryService } from 'src/app/modules/shared/services/category.servic
 })
 export class NewCategoryComponent implements OnInit {
 
+  //para inicializar el categoryform importar fb:formbuilder en el constructor
   public categoryForm: FormGroup;
+  // para darle nombre al boton agregar actualizar
   estadoFormulario: string = "";
   constructor(private fb: FormBuilder, private categoryService: CategoryService,
             private dialogRef: MatDialogRef<NewCategoryComponent>, 
@@ -19,8 +21,11 @@ export class NewCategoryComponent implements OnInit {
     console.log(data);
     this.estadoFormulario = "Agregar";
 
+    //  instaciamos el objeto formulario categoryform con el this 
     this.categoryForm = this.fb.group( {
+      //campo del formulario puede tener valor por defecto en las '' required es requerido
       name: ['', Validators.required],
+      //campo description 
       description: ['', Validators.required]
     });
 
@@ -33,10 +38,13 @@ export class NewCategoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // evento para guardar con validaciones ponemos datos en constructor private category service
   onSave(){
-
+//creamos nuestro objeto json data 
     let data = {
+      // pregunta si el campo no es vacio  luego retorna el valor si tiene datos al data
       name: this.categoryForm.get('name')?.value,
+      //si el vampo no es vacio retorna el valor luego retorna valor si tiene datos al data
       description: this.categoryForm.get('description')?.value
     }
 

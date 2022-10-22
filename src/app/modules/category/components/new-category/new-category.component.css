@@ -1,7 +1,11 @@
+/*realizamos estas clases para ocupar todo el ancho */
 .category-container{
     display: flex;
+    /*hacemos un salto */
     flex-direction: column;
 }
+
+/*centramos el cotenedor*/
 
 .category-container > * {
     width: 100%;

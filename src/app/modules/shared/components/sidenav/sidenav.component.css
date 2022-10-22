@@ -1,46 +1,44 @@
-.dashboard-container{
-    display:flex; /* despliegue flexible reodernar los elementos*/
-    flex-direction: column; /* se ordenan verticalmente*/
-    position: absolute; /*se posicionarai arriba de la pantalla*/
-    /*estos ultimos cuartos sirven para el margen del archivo arriba abajo izquierda derecha*/
-    top:0;
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
     bottom: 0;
-    left:0;
-    right:0 ;
+    left: 0;
+    right: 0;
 }
-/* matenemos el tolbar arriba de la pantalla */
+
 .is-mobile .dashboard-toolbar{
     position: fixed;
     z-index: 2;
 }
+
+
 h1.app-name {
-    /*Margen al H1*/
     margin-left: 8px;
 }
 
+.sidenav-container{
+    flex: 1;
+}
+
+.is-mobile .sidenav-container {
+    flex: 1 0 auto;
+}
+
 ul li {
-    /* para dar estilo a las listas en este caso eliminamos el estilo*/
     list-style: none;
 }
-.sidenav-container
-{
-    flex: 1;
 
-}
-/*se muestra si es ordenador o mobile*/
-.is.mobile .sidenav-container{
-flex: 1 0 auto;
-}
 .profile-card{
     text-align: center;
     padding: 0 20px 20px 20px;
 }
+
 .header{
     margin-top: 20px;
 }
 
-/*para configurar el icono espacio */
-.icon{
+.icono{
     margin-right: 10px;
-
 }
